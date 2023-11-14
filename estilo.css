@@ -1,11 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     overflow: hidden;
     background-image:linear-gradient(90deg, rgb(129, 199, 245), rgb(64, 31, 185));
 }
 
-#text{
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.esquerda {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.direita {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+.principal {
+    display: none;
+}
+
+.esquerda h1 {
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+}
+
+.esquerda h1 span {
+    font-size: 80px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+    background-color: rgb(6, 6, 66);
+    border-radius: 20px;  
+    width: 140px;
+    padding: 10px 25px 1px 25px;
+    animation: aparecer 3s ease-in-out 1 forwards;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.direita h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+    background-color: rgb(16, 25, 65);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.esquerda h2 {
+    margin-top: 230px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+}
+
+.direita p {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.direita p a{
+    text-decoration: none;
+    color: white;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    margin-top: 110px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.btns .btn {
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.507);
+    padding: 15px 80px;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.direita a {
+    padding-top: 10px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+/* #text{
     position: relative;
     top: -535px;
     left: 628px;
@@ -144,15 +256,8 @@ h2{
         opacity: 0; 
         transform: translateY(40px); 
     }
-    20%{
-        opacity: 1; 
-        transform: translateY(1); 
-    }
-    60%{
-        opacity: 1; 
-        transform: translateY(0); 
-    }
     100%{
+        opacity: 1;
         transform: translateX(-500px);
     }
 }
@@ -171,4 +276,4 @@ h2{
 a{
     text-decoration: none;
     color: white;
-}
+} */
