@@ -2,17 +2,10 @@ const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
-const characters = [
+let characters = [
   'image1',
   'image2',
   'image3',
-  'image4',
-  'image5',
-  'image6',
-  'image7',
-  'image8',
-  'image9',
-  'image10',
 ];
 
 const createElement = (tag, className) => {
@@ -27,7 +20,7 @@ let secondCard = '';
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card');
 
-  if (disabledCards.length === 20) {
+  if (disabledCards.length === 6) {
     clearInterval(this.loop);
     alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
   }
