@@ -81,3 +81,23 @@ main {
   
     }
 }
+
+.modal-content {
+  transform: translateY(40%);
+}
+
+.modal-content {
+  background-image: url("../img/debut.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50vw;
+  height: 50vh;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+}
+
+.modal-body {
+}
