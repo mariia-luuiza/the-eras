@@ -3,8 +3,8 @@ const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
 let characters = [
-  'image1',
-  'image2',
+  'image1.1',
+  'image2.1',
 
 ];
 

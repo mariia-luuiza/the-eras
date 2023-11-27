@@ -3,10 +3,11 @@ const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
 let characters = [
-  'image1',
-  'image2',
-  'image3',
-  'image4',
+  'image10.4',
+  'image11.4',
+  'image12.4',
+  'image13.4',
+
 ];
 
 const createElement = (tag, className) => {
@@ -23,7 +24,8 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 8) {
     clearInterval(this.loop);
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+    $("#exampleModal").modal('show');
+
   }
 }
 
