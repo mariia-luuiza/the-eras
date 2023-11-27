@@ -93,11 +93,36 @@ main {
   background-position: center;
   width: 50vw;
   height: 50vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
 .modal-content {
   border-radius: 20px !important;
+  width: 800px !important;
+  position: relative !important;
+  left: calc(50vw - 400px) !important;
 }
 
-.modal-body {
+.modal {
+  align-items: center;
+}
+
+.modal-dialog {
+  margin: 0 !important;
+} 
+
+.btn-proximo {
+  display: block;
+  width: 120px;
+  padding: 5px 0;
+  
+}
+button a{
+  text-decoration: none;
+  color: black;
+ 
+
 }

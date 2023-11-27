@@ -8,7 +8,7 @@
 
 body{
     overflow: hidden;
-    background-image:linear-gradient(90deg, rgb(128, 198, 245), rgb(64, 31, 185));
+    background-image: linear-gradient(90deg, rgb(128, 198, 245), rgb(64, 31, 185));
 }
 
 main {
@@ -36,7 +36,14 @@ main {
 }
 
 .principal {
-    display: none;
+    width: 40vw;
+    height: 100vh;
+    background-image: url("../img/primeira.jpg");
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    animation: subir 1s ease-in-out 1 forwards,
+        esquerda 1s ease-in-out 2s alternate-reverse forwards;
 }
 
 .esquerda h1 {
@@ -117,165 +124,26 @@ main {
     text-align: center;
 }
 
-/* #text{
-    position: relative;
-    top: -535px;
-    left: 628px;
-    font-size: 65px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
-    padding: 18px 15px 1px 70px;
-    background-color: rgb(209, 209, 159);
-    width: 600px;
-    height: 100px;
-    animation: aparecer2 3s ease-in  1 forwards;
-}
-#p1{
-    position: relative;
-    top: -500px;
-    left: 755px;
-    font-size: 38px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    width: 400px;
-    text-align: center;
-    animation: aparecer2 3s ease-in  1 forwards;
-
-    
-}
-#p2{
-    position: relative;
-    top: -490px;
-    left: 850px;
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 12px 1px 1px 55px;
-    background-color: rgba(255, 255, 255, 0.507);
-    width: 150px;
-    height: 58px;
-    border-radius: 20px;
-    animation: aparecer2 3s ease-in  1 forwards;
-}
-#p3{
-    position: relative;
-    top: -490px;
-    left: 850px;
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 12px 1px 1px 55px;
-    background-color: rgba(255, 255, 255, 0.507);
-    width: 150px;
-    height: 58px;
-    border-radius: 20px;
-    animation: aparecer2 3s ease-in  1 forwards;
-}
-#p4{
-    position: relative;
-    top: -520px;
-    left: 880px;
-    font-size: 15px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
-    animation: aparecer2 3s ease-in  1 forwards;
-}
-#p5{
-    position: relative;
-    top: -490px;
-    left: 730px;
-    font-size: 0px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
-    animation: aparecer2 3s ease-in  1 forwards;
-}
-
-
-h2{
-    position: relative;
-    top: 50px;
-    left: 170px;
-    font-size: 50px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
-    animation: aparecer 3s ease-in-out 1 forwards;
-
-}
-#in{
-    position: relative;
-    left: 160px;
-    top: 70px;
-    font-size: 100px;
-    font-family: 'Bebas Neue', sans-serif;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
-    animation: aparecer 3s ease-in-out 1 forwards;
-
-    
-}
-#game{
-    position: relative;
-    left: 200px;
-    top: 100px;
-    font-size: 80px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
-    background-color: rgb(6, 6, 66);
-    border-radius: 20px;  
-    width: 140px;
-    padding: 10px 25px 1px 25px;
-    animation: aparecer 3s ease-in-out 1 forwards;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-#principal{
-    width: 39%;
-    position: relative;
-    top: -1080px;
-    left: 620px;
-    animation: surgir 3s ease 1 forwards;
-}
-
-@keyframes aparecer {
-    0% {
-        opacity: 0; 
-    }
-    20% {
-        opacity: 1; 
-    }
-    55% {
-        opacity: 1; 
-    }
-    100% {
-        opacity: 0; 
-    }
-}
-
-@keyframes surgir {
-    0%{
-        opacity: 0; 
-        transform: translateY(40px); 
-    }
-    100%{
+@keyframes subir {
+    to {
         opacity: 1;
-        transform: translateX(-500px);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(200px);
     }
 }
-@keyframes aparecer2 {
-    0% {
-        opacity: 0; 
+
+@keyframes esquerda {
+    to {
+        transform: translateX(0);
     }
-    
-    50% {
-        opacity: 0; 
-    }
-    100% {
-        opacity: 1; 
+    from {
+        transform: translateX(-50vw);
+        width: 50vw;
     }
 }
-a{
+
+a {
     text-decoration: none;
-    color: white;
 }
- */
