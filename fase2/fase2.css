@@ -32,7 +32,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
