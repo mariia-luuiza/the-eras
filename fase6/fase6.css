@@ -90,7 +90,7 @@ header {
 }
 
 .modal-content {
-  background-image: url("../img/debut.jpg") !important;
+  background-image: url("../img/reputation.jpg") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -152,7 +152,7 @@ h1 {
 .btn-proximo::before {
   content: '';
   position: absolute;
-  background: rgb(8, 53, 28);
+  background: rgb(19, 19, 19);
   width: 0;
   height: 105%;
   top: -1%;
