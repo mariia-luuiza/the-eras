@@ -1,82 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  overflow: hidden;
+}
+
 main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-image: url('../img/wall.jpeg');
-    background-size: cover;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url('../img/wall.jpeg');
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  padding: 20px 20px 50px;
 }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2em;
-    width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    margin: 0 0 30px;
-    border-radius: 5px;
-  }
-  
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  margin: 0 0 30px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 11px 0px #00000057;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.card {
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  background-color: #ccc;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid rgb(64, 31, 185);
+  border-radius: 5px;
+  transition: all 400ms ease;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-image: url('../img/back.png');
+  backface-visibility: hidden;
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+
+.disabled-card {
+  filter: saturate(0);
+  opacity: 0.5;
+}
+
+@media screen and (max-width:920px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+
   }
-  
-  .card {
-    aspect-ratio: 3/4;
-    width: 100%;
-    border-radius: 5px;
-    position: relative;
-    transition: all 400ms ease;
-    transform-style: preserve-3d;
-    background-color: #ccc;
-  }
-  
-  .face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    border: 5px solid  rgb(64, 31, 185);
-    border-radius: 5px;
-    transition: all 400ms ease;
-  }
-  
-  .front {
-    transform: rotateY(180deg);
-  }
-  
-  .back {
-    background-image: url('../img/back.png');
-    backface-visibility: hidden;
-  }
-  
-  .reveal-card {
-    transform: rotateY(180deg);
-  }
-  
-  .disabled-card {
-    filter: saturate(0);
-    opacity: 0.5;
-  }
-  
-  @media screen and (max-width:920px) {
-    .grid {
-      grid-template-columns: repeat(5, 1fr);
-  
-    }
 }
-body{
-  overflow: hidden                                    ;
+
+.modal-content {
+  transform: translateY(40%);
+}
+
+.modal-content {
+  background-image: url("../img/debut.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+  width: 800px !important;
+  position: relative !important;
+  left: calc(50vw - 400px) !important;
+}
+
+.modal {
+  align-items: center;
+}
+
+.modal-dialog {
+  margin: 0 !important;
+}
+
+.btn-proximo {
+  display: block;
+  width: 120px;
+  padding: 12px 0;
+  border-radius: 10px;
+  z-index: 1;
+  border: none;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.384);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-proximo button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+
+}
+
+h1 {
+  margin: 60px 0 !important;
+  font-size: 70px !important;
+  font-family: 'Dancing Script', cursive !important;
+  color: rgba(182, 57, 57, 0.829) !important;
+  text-shadow: 1px 1px 2px #2125298c !important;
+}
+.btn-proximo::before {
+  content: '';
+  position: absolute;
+  background: rgb(14, 39, 25);
+  width: 0;
+  height: 105%;
+  top: -1%;
+  left: 0;
+  z-index: -1;
+  transition: all .5s ease;
+  border-radius: 8px;
+}
+
+.btn-proximo:hover::before {
+  width: 100%;
+}
+
+.btn-proximo {
+  position: relative;
+}
+
+.btn-proximo:hover button {
+  color: white;
+}
+
+a:active {
+  color: black;
+  transform: translate(1px, 1px);
 }
