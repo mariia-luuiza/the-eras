@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+let music = document.getElementById("Music");
 
 let characters = [
   'image1.1',
@@ -63,6 +64,7 @@ const checkCards = () => {
 }
 
 const revealCard = ({ target }) => {
+  music.play();
 
   if (target.parentNode.className.includes('reveal-card')) {
     return;
@@ -124,4 +126,5 @@ window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   loadGame();
+  
 }
