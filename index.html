@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <title>The Eras Game</title>
-
 </head>
 
 <body>
@@ -20,15 +19,73 @@
             <p>Preparados para <br> um jogo <a href="https://youtu.be/Tmz1lz0zcLQ?si=nQELee8opLEcQxRU"
                     target="_blank">"mastermind"?</a></p>
             <div class="btns">
-                <button class="btn"><a href="fase1/fase1.html">Fases</a></button>
-                <button class="btn">Login</button>
+                <button class="btn"><a href="fase1/fase1.html">Play</a></button>
+                <button class="btn" onclick="openModalLogin()">Login</button>
             </div>
-            <a href="">Entrar como convidado</a>
+            <a onclick="openModalCredit()">Honras!</a>
         </div>
         <div class="principal">
         </div>
     </main>
 
-</body>
+    <audio src="" autoplay></audio>
 
+    <!--Modal para Login-->
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModalLogin()">&times;</span>
+            <form class="login-form">
+                <img src="img/primeira.jpg" alt="">
+
+                <div class="login__header">
+                  <h1>The Eras Game</h1>
+                </div>
+            
+                <input type="text" placeholder="Name" class="login__input">
+                <button type="submit" class="login__button">Play</button>
+            
+              </form>
+        </div>
+    </div>
+
+    <!-- Modal de creditos and explain-->
+    <div id="modalCredit" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModalCredit()">&times;</span>
+            <h1>The Eras Game</h1>
+            <p>O "The Eras Game" é uma sequência de jogos da memória cujo objetivo é alcançar o menor tempo possível. Inspirado nos álbuns da famosa Taylor Swift, o jogo apresenta diversas fotos dos respectivos álbuns temáticos em cada fase. <br>
+
+                Esperamos que seja um jogo divertido para você! ^-^ <br><br>
+                
+                Abraços dos seus programadores favoritos: Maria Luzia, Raul Leal e Vinicius Costa.
+
+            </p>
+        </div>
+    </div>
+
+
+    <!---Scripts para abrir/fechar os modais-->
+    <script>
+        function openModalLogin() {
+            document.getElementById('modalLogin').style.display = 'block';
+        }
+
+        function closeModalLogin() {
+            document.getElementById('modalLogin').style.display = 'none';
+        }
+
+    </script>
+
+    <script>
+            function openModalCredit() {
+                document.getElementById('modalCredit').style.display = 'block';
+            }
+        
+            function closeModalCredit() {
+                document.getElementById('modalCredit').style.display = 'none';
+            }
+    </script>
+
+    <script src="js/login.js"></script>
+</body>
 </html>
