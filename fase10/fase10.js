@@ -119,8 +119,16 @@ const startTimer = () => {
 
 }
 
-window.onload = () => {
+$(document).ready(function() {
   spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   loadGame();
-}
+
+  let estear = localStorage.getItem('player');
+
+  if (estear === 'Jayz') {
+    $(".btn-proximo").attr("href", "../custom night/fase.html");
+  } else {
+    $(".btn-proximo").attr("href", "../index.html");
+  }
+});
