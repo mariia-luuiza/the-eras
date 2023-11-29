@@ -93,6 +93,7 @@ const createCard = (character) => {
   card.appendChild(front);
   card.appendChild(back);
 
+  //adiciona o evento de click que faz a poder ser revelada.
   card.addEventListener('click', revealCard);
   card.setAttribute('data-character', character)
 
@@ -102,8 +103,10 @@ const createCard = (character) => {
 const loadGame = () => {
   const duplicateCharacters = [...characters, ...characters];
 
+  //embraralha as cartas.
   const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
 
+  //criar as cartas atrvés de um for. Enquanto o n de imagens não acabar criar uma carta
   shuffledArray.forEach((character) => {
     const card = createCard(character);
     grid.appendChild(card);
@@ -111,7 +114,7 @@ const loadGame = () => {
 }
 
 const startTimer = () => {
-
+  //contador 
   this.loop = setInterval(() => {
     const currentTime = +timer.innerHTML;
     timer.innerHTML = currentTime + 1;
@@ -120,13 +123,15 @@ const startTimer = () => {
 }
 
 $(document).ready(function() {
+  //coloca o nome do player no contador
   spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   loadGame();
 
   let estear = localStorage.getItem('player');
-
-  if (estear === 'Jayz') {
+  
+  // <!--Easter Egg: caso o nome do player for becky havera uma fase secreta-->
+  if (estear === 'Becky') {
     $(".btn-proximo").attr("href", "../custom night/fase.html");
   } else {
     $(".btn-proximo").attr("href", "../index.html");
